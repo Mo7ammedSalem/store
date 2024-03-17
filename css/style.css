@@ -1,13 +1,14 @@
 :root {
-    --main-color: ;
-    --orang-color: ;
-    --light-color: ;
+    --main-color: #212529;
+    --second-color: #89BBD1;
+    --light-color: #6C757D;
+    --main-transition: 0.3s;
 }
 
 body {
     margin: 0;
     padding: 0;
-    font-family: "Nunito Sans", sans-serif;
+    font-family: "Lato", sans-serif
 }
 
 html {
@@ -51,4 +52,59 @@ button {
 
 p {
     line-height: 28px;
+}
+
+.container {
+    padding-right: 8rem;
+    padding-left: 8rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* FIRST SECTION STYLE */
+.text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: var(--main-color);
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+}
+
+.text a {
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+    font-size: 0.8rem;
+}
+
+.text a:hover {
+    border-bottom: 0px;
+}
+
+.first .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+.first img {
+    max-width: 100%;
+    border-radius: 0.5rem;
+    border: 1px solid #F9F9F9;
+}
+
+.card .title{
+    margin-left: 0.5rem;
+}
+.card p {
+    color: var(--light-color);
+}
+.card h2{
+    transition: var(--main-transition);
+}
+.card h2:hover {
+    color: var(--second-color);
+    cursor: pointer;
 }
